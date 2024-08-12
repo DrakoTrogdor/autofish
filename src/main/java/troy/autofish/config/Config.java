@@ -6,15 +6,21 @@ public class Config {
 
     @Expose boolean isAutofishEnabled = true;
     @Expose boolean multiRod = false;
+    @Expose boolean isOpenWaterDetectEnabled = true;
     @Expose boolean noBreak = false;
     @Expose boolean persistentMode = false;
     @Expose boolean useSoundDetection = false;
     @Expose boolean forceMPDetection = false;
     @Expose long recastDelay = 1500;
+    @Expose long randomPercent = 50;
+    @Expose long reelInDelay = 1;
     @Expose String clearLagRegex = "\\[ClearLag\\] Removed [0-9]+ Entities!";
 
     public boolean isAutofishEnabled() {
         return isAutofishEnabled;
+    }
+    public boolean isOpenWaterDetectEnabled() {
+        return isOpenWaterDetectEnabled;
     }
 
     public boolean isMultiRod() {
@@ -35,6 +41,10 @@ public class Config {
 
     public long getRecastDelay() {
         return recastDelay;
+    }
+
+    public long getRandomDelay(){
+        return randomPercent;
     }
 
     public String getClearLagRegex() {
@@ -62,9 +72,32 @@ public class Config {
     public void setRecastDelay(long recastDelay) {
         this.recastDelay = recastDelay;
     }
+    public void setRandomDelay(long randomPercent){
+        this.randomPercent = randomPercent;
+    }
 
     public void setClearLagRegex(String clearLagRegex) {
         this.clearLagRegex = clearLagRegex;
+    }
+
+    public void setOpenWaterDetectEnabled(boolean openWaterDetectEnabled) {
+        isOpenWaterDetectEnabled = openWaterDetectEnabled;
+    }
+
+    public long getRandomPercent() {
+        return randomPercent;
+    }
+
+    public void setRandomPercent(long randomPercent) {
+        this.randomPercent = randomPercent;
+    }
+
+    public long getReelInDelay() {
+        return reelInDelay;
+    }
+
+    public void setReelInDelay(long reelInDelay) {
+        this.reelInDelay = reelInDelay;
     }
 
     /**

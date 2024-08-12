@@ -2,7 +2,7 @@ package troy.autofish.monitor;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.projectile.FishingBobberEntity;
-import net.minecraft.network.Packet;
+import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.PlaySoundFromEntityS2CPacket;
 import net.minecraft.network.packet.s2c.play.PlaySoundS2CPacket;
 import net.minecraft.sound.SoundEvent;
@@ -31,7 +31,7 @@ public class FishMonitorMPSound implements FishMonitorMP {
 
             if (packet instanceof PlaySoundS2CPacket) {
                 PlaySoundS2CPacket soundPacket = (PlaySoundS2CPacket) packet;
-                SoundEvent soundEvent = (SoundEvent) soundPacket.getSound();
+                SoundEvent soundEvent = soundPacket.getSound().value();
                 soundName = soundEvent.getId().toString();
                 x = soundPacket.getX();
                 y = soundPacket.getY();

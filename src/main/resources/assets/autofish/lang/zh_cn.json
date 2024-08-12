@@ -1,6 +1,6 @@
 {
   "key.autofish.open_gui": "打开Autofish界面",
-  "options.autofish.title": "Autofish设置",
+  "options.autofish.title": "XPlus Autofish设置",
 
   "options.autofish.toggle.on": "\u00A7a开",
   "options.autofish.toggle.off": "\u00A7e关",
@@ -17,6 +17,11 @@
   "options.autofish.break_protection.tooltip_0": "在钓鱼竿断裂之前",
   "options.autofish.break_protection.tooltip_1": "停止使用耐久低的钓鱼竿",
 
+  "options.autofish.open_water_detection.title": "启用开放水域检测",
+  "options.autofish.open_water_detection.tooltip_0" : "在游戏版本20w12a(1.16)以上，",
+  "options.autofish.open_water_detection.tooltip_1" : "只有在开放水域才能获得宝藏战利品。",
+  "options.autofish.open_water_detection.tooltip_2" : "启用该选项后，当您未在开放水域钓鱼时将提醒您。",
+
   "options.autofish.persistent.title": "启用持续模式",
   "options.autofish.persistent.tooltip_0": "使其始终保持鱼钩为投掷状态",
   "options.autofish.persistent.tooltip_1": "每当钓鱼竿在手上时",
@@ -24,7 +29,7 @@
   "options.autofish.persistent.tooltip_3": "并在需要时重新投掷",
   "options.autofish.persistent.tooltip_4": "这对于滞后问题或",
   "options.autofish.persistent.tooltip_5": "长时间钓鱼非常有用",
-  
+
   "options.autofish.sound.title": "使用声音检测",
   "options.autofish.sound.tooltip_0": "\u00A76基于浮标声音的更新",
   "options.autofish.sound.tooltip_1": "\u00A76他将更准确的检测收杆时机",
@@ -47,11 +52,27 @@
   "options.autofish.recast_delay.tooltip_0": "调整收杆和重新投掷钓鱼竿之间的延迟",
   "options.autofish.recast_delay.tooltip_1": "以毫秒 (ms) 为单位.",
 
+  "options.autofish.random_delay.title": "随机重新投掷延迟",
+  "options.autofish.random_delay.value": "百分之 %d",
+  "options.autofish.random_delay.tooltip_0": "为投掷钓鱼竿的延迟添加 ±% 的变化量",
+  "options.autofish.random_delay.tooltip_1": "例如: 当默认延迟为1500ms时将该选项设置为20%，",
+  "options.autofish.random_delay.tooltip_2": "会使重新投掷延迟落在1200-1800ms区间内 (1500ms ±20%).",
+  "options.autofish.random_delay.tooltip_3": "将该选项设置为0以禁用此功能",
+
   "options.autofish.clear_regex.title": "启用持续模式",
   "options.autofish.clear_regex.tooltip_0": "使用聊天栏正则表达式",
   "options.autofish.clear_regex.tooltip_1": "来触发重新投掷钓鱼竿.",
   "options.autofish.clear_regex.tooltip_2": "\u00A76可设置 \u00A7a正则表达式\u00A76.",
 
   "options.autofish.basic.title": "基本选项",
-  "options.autofish.advanced.title": "高级选项"
+  "options.autofish.advanced.title": "高级选项",
+
+  "info.autofish.open_water_detection.fail": "§c[自动钓鱼] 您当前钓鱼的区域不是开放水域，无法获得宝藏!§0",
+  "info.autofish.open_water_detection.success": "§2[自动钓鱼] 您当前钓鱼的区域是开放水域!§0",
+
+  "options.autofish.reel_in_delay.title": "收杆延迟",
+  "options.autofish.reel_in_delay.value": "%d 毫秒",
+  "options.autofish.reel_in_delay.tooltip_0": "当鱼咬钩时，延迟一段时间收杆.",
+  "options.autofish.reel_in_delay.tooltip_1": "将此项设置为1以禁用此功能."
+
 }

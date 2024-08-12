@@ -7,7 +7,7 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.entity.Entity;
-import net.minecraft.network.Packet;
+import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.GameMessageS2CPacket;
 import org.lwjgl.glfw.GLFW;
 import troy.autofish.config.Config;
@@ -19,6 +19,7 @@ public class FabricModAutofish implements ClientModInitializer {
 
     private static FabricModAutofish instance;
     private Autofish autofish;
+    private GuiChecker guiChecker;
     private AutofishScheduler scheduler;
     private KeyBinding autofishGuiKey;
     private ConfigManager configManager;
@@ -38,6 +39,7 @@ public class FabricModAutofish implements ClientModInitializer {
         this.scheduler = new AutofishScheduler(this);
         //Create Autofisher instance
         this.autofish = new Autofish(this);
+        this.guiChecker = new GuiChecker(this);
 
     }
 
@@ -45,6 +47,7 @@ public class FabricModAutofish implements ClientModInitializer {
         if (autofishGuiKey.wasPressed()) {
             client.setScreen(AutofishScreenBuilder.buildScreen(this, client.currentScreen));
         }
+        guiChecker.toggleAutoFish(client);
         autofish.tick(client);
         scheduler.tick(client);
     }
